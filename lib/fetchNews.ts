@@ -4,7 +4,6 @@ const fetchNews = async (
   keywords?: String,
   isDynamic?: boolean
 ) => {
-  // console.log("params:", caterogy);
   const query = gql`
     query MyQuery(
       $access_key: String!
@@ -14,7 +13,7 @@ const fetchNews = async (
       myQuery(
         access_key: $access_key
         categories: $categories
-        countries: "gb"
+        countries: "us"
         sort: "published_desc"
         keywords: $keywords
       ) {
@@ -40,13 +39,6 @@ const fetchNews = async (
     }
   `;
 
-  console.log(
-    "keys-s",
-    process.env.STEPZEN_API_KEY,
-    "key-m",
-    process.env.MEDIASTACK_API_KEY
-  );
-
   // fetch with cache from next
   const res = await fetch(
     "https://vanadzor.stepzen.net/api/irreverent-mandrill/__graphql",
@@ -69,7 +61,6 @@ const fetchNews = async (
     }
   );
 
-  console.log("gettting fresh data-20 secs");
   const newsresponses = await res.json();
   return newsresponses;
 };

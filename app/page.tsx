@@ -1,4 +1,5 @@
 import React from "react";
+import { promises } from "stream";
 import { NewsResponse } from "../../typings";
 import fetchNews from "../lib/fetchNews";
 import NewsList from "./NewsList";

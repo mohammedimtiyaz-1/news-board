@@ -12,7 +12,7 @@ function SearchBox() {
 
   return (
     <form
-      className="max-w-6xl mx-auto flex justify-between items-center px-5"
+      className="max-w-2xl mx-auto flex justify-between items-center px-5 my-4 rounded-2xl border border-gray-800 dark:border-gray-100"
       onSubmit={handleSearch}
     >
       <input
