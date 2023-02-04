@@ -2,16 +2,7 @@
 import React from "react";
 import NavLink from "./NavLink";
 import { usePathname } from "next/navigation";
-
-const categories: string[] = [
-  "general",
-  "business",
-  "entertainment",
-  "health",
-  "science",
-  "sports",
-  "technology",
-];
+import { categories } from "../constants";
 
 function NavLinks() {
   const pathName = usePathname();

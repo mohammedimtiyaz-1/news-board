@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { Article } from "../../../typings";
+import { Article } from "../../typings";
 import LiveTimeStamp from "../LiveTimeStamp";
 
 type Props = {

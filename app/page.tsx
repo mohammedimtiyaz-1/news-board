@@ -1,19 +1,10 @@
 import React from "react";
-import { promises } from "stream";
-import { NewsResponse } from "../../typings";
+import { NewsResponse } from "../typings";
 import fetchNews from "../lib/fetchNews";
 import NewsList from "./NewsList";
+import { categories } from "../constants";
 
 async function Homepage() {
-  const categories: string[] = [
-    "general",
-    "business",
-    "entertainment",
-    "health",
-    "science",
-    "sports",
-    "technology",
-  ];
   let news: NewsResponse = await fetchNews(categories.join(","));
 
   return (

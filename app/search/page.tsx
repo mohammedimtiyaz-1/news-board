@@ -1,11 +1,11 @@
-import { NewsResponse } from "../../../typings";
+import { NewsResponse } from "../../typings";
 import fetchNews from "../../lib/fetchNews";
 import NewsList from "../NewsList";
 
 type Props = {
   searchParams: { term: string };
 };
-async function SearchPage({ searchParams }: Props) {
+async function SearchPage({ searchParams }: any) {
   console.log("search param", searchParams);
   let news: NewsResponse = await fetchNews("general", searchParams.term, true);
   console.log("Search params", searchParams);

@@ -1,5 +1,5 @@
 import React from "react";
-import { Article } from "../../typings";
+import { Article } from "../typings";
 import LiveTimeStamp from "./LiveTimeStamp";
 import ReadMoreButton from "./ReadMoreButton";
 

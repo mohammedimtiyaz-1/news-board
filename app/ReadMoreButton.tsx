@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import React from "react";
-import { Article } from "../../typings";
+import { Article } from "../typings";
 
 type Props = {
   article: Article;
